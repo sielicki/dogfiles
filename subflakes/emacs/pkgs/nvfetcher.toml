@@ -1,6 +1,6 @@
 [eshell-p10k]
-src.git = "https://github.com/elken/eshell-p10k"
-fetch.git = "https://github.com/elken/eshell-p10k"
+src.git = "https://github.com/sielicki/eshell-p10k"
+fetch.git = "https://github.com/sielicki/eshell-p10k"
 
 [jsonian]
 src.git = "https://github.com/iwahbe/jsonian"

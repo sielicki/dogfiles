@@ -16,16 +16,16 @@
   };
   eshell-p10k = {
     pname = "eshell-p10k";
-    version = "402bd88bb4a187c35cc3f2bb98551f850476f3b3";
+    version = "410ac5517cb4e222adb76b494ceb1b8d5da788fb";
     src = fetchgit {
-      url = "https://github.com/elken/eshell-p10k";
-      rev = "402bd88bb4a187c35cc3f2bb98551f850476f3b3";
+      url = "https://github.com/sielicki/eshell-p10k";
+      rev = "410ac5517cb4e222adb76b494ceb1b8d5da788fb";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "sha256-fqv2lcBnNeDZhwFueLp//azGy6shTw73lMbYmvkErrg=";
+      sha256 = "sha256-uGDQZ92b3ChRmKq88fLoSN0dpBg2xiHUBKpod9LwWxo=";
     };
-    date = "2021-11-08";
+    date = "2023-05-29";
   };
   eshell-vterm = {
     pname = "eshell-vterm";
