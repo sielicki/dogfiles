@@ -1,0 +1,15 @@
+[eshell-p10k]
+src.git = "https://github.com/elken/eshell-p10k"
+fetch.git = "https://github.com/elken/eshell-p10k"
+
+[jsonian]
+src.git = "https://github.com/iwahbe/jsonian"
+fetch.git = "https://github.com/iwahbe/jsonian"
+
+[eshell-vterm]
+src.git = "https://github.com/iostapyshyn/eshell-vterm"
+fetch.git = "https://github.com/iostapyshyn/eshell-vterm"
+
+[combobulate]
+src.git = "https://github.com/mickeynp/combobulate.git"
+fetch.git = "https://github.com/mickeynp/combobulate.git"

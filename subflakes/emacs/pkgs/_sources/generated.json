@@ -1,0 +1,78 @@
+{
+    "combobulate": {
+        "cargoLocks": null,
+        "date": "2023-05-17",
+        "extract": null,
+        "name": "combobulate",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "0a0907ce6696c97508eae71874ce69611e113ad0",
+            "sha256": "sha256-GK21d/fbYe+LvMdyYpPHRKeBTSo7QzMvsCWlcG0lAao=",
+            "type": "git",
+            "url": "https://github.com/mickeynp/combobulate.git"
+        },
+        "version": "0a0907ce6696c97508eae71874ce69611e113ad0"
+    },
+    "eshell-p10k": {
+        "cargoLocks": null,
+        "date": "2021-11-08",
+        "extract": null,
+        "name": "eshell-p10k",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "402bd88bb4a187c35cc3f2bb98551f850476f3b3",
+            "sha256": "sha256-fqv2lcBnNeDZhwFueLp//azGy6shTw73lMbYmvkErrg=",
+            "type": "git",
+            "url": "https://github.com/elken/eshell-p10k"
+        },
+        "version": "402bd88bb4a187c35cc3f2bb98551f850476f3b3"
+    },
+    "eshell-vterm": {
+        "cargoLocks": null,
+        "date": "2022-12-29",
+        "extract": null,
+        "name": "eshell-vterm",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "e96c30ad5e7d63b778fc3232e81b090b63b13277",
+            "sha256": "sha256-fjPPTKlLYoyen9rhBs3F/fm5fvZ2YUYI65SrgrYX7n0=",
+            "type": "git",
+            "url": "https://github.com/iostapyshyn/eshell-vterm"
+        },
+        "version": "e96c30ad5e7d63b778fc3232e81b090b63b13277"
+    },
+    "jsonian": {
+        "cargoLocks": null,
+        "date": "2023-04-14",
+        "extract": null,
+        "name": "jsonian",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "e6a6a8452fc84f77bf5644851306c8b8d63a3bc5",
+            "sha256": "sha256-dx+wJf/qZgMqR2SsyATB3u0NDiKLgBkDmbS7+C5jyKs=",
+            "type": "git",
+            "url": "https://github.com/iwahbe/jsonian"
+        },
+        "version": "e6a6a8452fc84f77bf5644851306c8b8d63a3bc5"
+    }
+}

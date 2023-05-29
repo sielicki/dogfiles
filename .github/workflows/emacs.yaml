@@ -1,0 +1,70 @@
+name: emacs
+on:
+  push:
+    paths:
+    - 'subflakes/emacs/**'  # run when I make changes
+  schedule:
+    - cron: '30 18 * * 0,5' # runs before the work-week starts and after the workweek ends.
+
+permissions: write-all
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2.3.4
+
+    - name: Install Nix
+      uses: cachix/install-nix-action@v20
+      with:
+        nix_path: nixpkgs=channel:nixos-unstable
+        github_access_token: '${{ secrets.GH_ACCESS_TOKEN }}'
+
+    - name: Add cachix caches
+      uses: cachix/cachix-action@v12
+      with:
+        name: sielicki
+        authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+        extraPullNames: nix-community,numtide
+
+    - name: Configure Git
+      run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+    
+    - name: build or pull from cachix, nvfetcher
+      run: nix build github:berberman/nvfetcher
+    
+    - name: Update nvfetcher drvs, flake inputs, commit, and push.
+      run: |
+        nix run --accept-flake-config .?dir=subflakes/emacs/#bump-nvfetchers $(pwd)/subflakes/emacs/
+        nix flake lock '.?dir=subflakes/emacs/#' --update-input nixpkgs --update-input pre-commit-hooks --update-input emacs-overlay 
+        git add subflakes/emacs/
+        git commit -m "autocommit: bump emacs" || /bin/true
+        git pull --rebase --autostash || /bin/true
+        git push || /bin/true
+  
+  build:
+    needs: bump
+    strategy:
+      matrix: 
+        #os: [ [ubuntu-latest], [macos-13] ]
+        os: [ [ubuntu-latest] ]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2.3.4
+    - name: Install nix
+      uses: cachix/install-nix-action@v20
+      with:
+        github_access_token: '${{ secrets.GH_ACCESS_TOKEN }}'
+        nix_path: nixpkgs=channel:nixos-unstable
+    - name: Configure cachix.
+      uses: cachix/cachix-action@v12
+      with:
+        name: sielicki
+        authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+        extraPullNames: nix-community,numtide
+    - name: Build Emacs on '${{ matrix.os }}'.
+      run: nix build --accept-flake-config '.?dir=subflakes/emacs/#emacs'
