@@ -30,12 +30,12 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "410ac5517cb4e222adb76b494ceb1b8d5da788fb",
+            "rev": "fce701187de408e7b23884169ea597a49a2d3205",
             "sha256": "sha256-uGDQZ92b3ChRmKq88fLoSN0dpBg2xiHUBKpod9LwWxo=",
             "type": "git",
-            "url": "https://github.com/sielicki/eshell-p10k"
+            "url": "https://github.com/elken/eshell-p10k"
         },
-        "version": "410ac5517cb4e222adb76b494ceb1b8d5da788fb"
+        "version": "fce701187de408e7b23884169ea597a49a2d3205"
     },
     "eshell-vterm": {
         "cargoLocks": null,

@@ -16,10 +16,10 @@
   };
   eshell-p10k = {
     pname = "eshell-p10k";
-    version = "410ac5517cb4e222adb76b494ceb1b8d5da788fb";
+    version = "fce701187de408e7b23884169ea597a49a2d3205";
     src = fetchgit {
-      url = "https://github.com/sielicki/eshell-p10k";
-      rev = "410ac5517cb4e222adb76b494ceb1b8d5da788fb";
+      url = "https://github.com/elken/eshell-p10k";
+      rev = "fce701187de408e7b23884169ea597a49a2d3205";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
