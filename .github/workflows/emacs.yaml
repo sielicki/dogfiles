@@ -49,8 +49,7 @@ jobs:
     needs: bump
     strategy:
       matrix: 
-        #os: [ [ubuntu-latest], [macos-13] ]
-        os: [ [ubuntu-latest] ]
+        os: [ [ubuntu-latest], [macos-13] ]
     runs-on: ${{ matrix.os }}
     steps:
     - name: Checkout repository
