@@ -13,7 +13,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
-    emacs-overlay.url = "github:nix-community/emacs-overlay";
+    emacs-overlay.url = "github:sielicki/emacs-overlay";
     emacs-overlay.inputs.nixpkgs.follows = "nixpkgs";
     nvfetcher.url = "github:berberman/nvfetcher";
   };
