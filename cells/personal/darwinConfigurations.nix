@@ -24,7 +24,7 @@
       home = "/Users/sielicki";
     };
 
-    home-manager.users.sielicki = {imports = with cell.homeProfiles; [base personal];};
+    home-manager.users.sielicki = {imports = with cell.homeProfiles; [base personal graphical];};
 
     security.pam.enableSudoTouchIdAuth = true;
 
