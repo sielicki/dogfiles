@@ -398,9 +398,8 @@
     :hook (flycheck-mode . sideline-flycheck-setup))
   )
 
-
-
 (use-package editorconfig
+  :diminish (editorconfig-mode)
   :config
   (editorconfig-mode 1))
 
@@ -476,8 +475,9 @@
   :mode "\\.[ds]?vh?\\'")
 
 (use-package yaml-mode
-  :mode (("\\.yaml\\'" "\\.yml\\'")  . yaml-mode))
-
+  :mode ("\\.yaml\\'" "\\.yml\\'"))
+(use-package rust-mode
+  :mode "\\.rs\\'")
 (use-package nix-mode
   :mode ("\\.nix\\'" "\\.nix.in\\'" "\\.flake\\'"))
 

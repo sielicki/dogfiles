@@ -58,7 +58,7 @@
         allowed-users = ["@wheel" "@admin" "root"];
         experimental-features = ["nix-command" "flakes"];
         accept-flake-config = true;
-        auto-optimise-store = true;
+        auto-optimise-store = false;
         trusted-substituters = [
           "https://numtide.cachix.org"
           "https://nix-community.cachix.org"
