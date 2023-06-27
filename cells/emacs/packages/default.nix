@@ -5,7 +5,7 @@
 }: let
   baseOverride = inputs.emacs-overlay.packages.emacs-unstable.override {
     withNS = true;
-    withTreeSitter = false;
+    withTreeSitter = true;
     siteStart = ./static/site-start.el;
   };
   emacs-plus-patches = [
@@ -71,6 +71,7 @@
       epkgs.delight
       epkgs.org-contrib
       epkgs.vterm
+      epkgs.treesit-grammars.with-all-grammars
     ];
   };
   emacs-with-packages = inputs.nixpkgs.symlinkJoin {

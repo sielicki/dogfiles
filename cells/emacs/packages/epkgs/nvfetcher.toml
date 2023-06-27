@@ -2,6 +2,10 @@
 src.git = "https://github.com/emacsmirror/multi-eshell"
 fetch.git = "https://github.com/emacsmirror/multi-eshell"
 
+[combobulate]
+src.git = "https://github.com/mickeynp/combobulate"
+fetch.git = "https://github.com/mickeynp/combobulate"
+
 [beardbolt]
 src.git = "https://github.com/joaotavora/beardbolt.git"
 fetch.git = "https://github.com/joaotavora/beardbolt.git"

@@ -210,21 +210,22 @@
 
 
 
-;; (use-package treesit
-;;   :ensure nil
-;;   ;; Optional, but recommended. Tree-sitter enabled major modes are
-;;   ;; distinct from their ordinary counterparts.
-;;   ;;
-;;   ;; You can remap major modes with `major-mode-remap-alist'. Note
-;;   ;; that this does *not* extend to hooks! Make sure you migrate them
-;;   ;; also
-;;   (dolist (mapping '((python-mode . python-ts-mode)
-;;                      (css-mode . css-ts-mode)
-;;                      (typescript-mode . tsx-ts-mode)
-;;                      (js-mode . js-ts-mode)
-;;                      (css-mode . css-ts-mode)
-;;                      (yaml-mode . yaml-ts-mode)))
-;;     (add-to-list 'major-mode-remap-alist mapping)))
+(use-package treesit
+  :ensure nil
+  :config
+  ;; note: any usage of python-mode-hooks requires amending to python-ts-mode-hooks
+  (dolist (mapping '((python-mode . python-ts-mode)
+                     (css-mode . css-ts-mode)
+                     (typescript-mode . tsx-ts-mode)
+                     (js-mode . js-ts-mode)
+                     (css-mode . css-ts-mode)
+                     (yaml-mode . yaml-ts-mode)))
+    (add-to-list 'major-mode-remap-alist mapping))
+
+  (use-package combobulate
+    :preface
+    (setq combobulate-key-prefix "C-c o")))
+
 
 (use-package doom-themes
   :config
@@ -292,17 +293,6 @@
           (accent . (telephone-line-buffer-segment))))
 
   (telephone-line-mode 1))
-
-
-
-;; (use-package combobulate
-;;   :hook ((python-ts-mode . combobulate-mode)
-;;          (js-ts-mode . combobulate-mode)
-;;          (css-ts-mode . combobulate-mode)
-;;          (yaml-ts-mode . combobulate-mode)
-;;          (typescript-ts-mode . combobulate-mode)
-;;          (tsx-ts-mode . combobulate-mode))
-;;   )
 
 (use-package mosey
   :bind (("C-a" . mosey-backward)
