@@ -1,3 +1,6 @@
+(use-package gcmh
+  :config (gcmh-mode 1))
+
 (use-package bind-key
   :config
   (add-to-list 'same-window-buffer-names "*Personal Keybindings*"))
