@@ -1,0 +1,40 @@
+{
+    "beardbolt": {
+        "cargoLocks": null,
+        "date": "2022-09-10",
+        "extract": null,
+        "name": "beardbolt",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "06fd5a1eeee6e8fa6ff598654863904fd67d4188",
+            "sha256": "sha256-K0F9fjBvHeRE5lLH9WdPPE5alrB5NpzMuwmQedw5bFI=",
+            "type": "git",
+            "url": "https://github.com/joaotavora/beardbolt.git"
+        },
+        "version": "06fd5a1eeee6e8fa6ff598654863904fd67d4188"
+    },
+    "multi-eshell": {
+        "cargoLocks": null,
+        "date": "2012-06-08",
+        "extract": null,
+        "name": "multi-eshell",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "ac10d93d64e6ea9706ae4396df186faeecaaea12",
+            "sha256": "sha256-Lls1LjLStKtsDEQmHragHQ27zKOwEJgMn1VjZCTQp6Y=",
+            "type": "git",
+            "url": "https://github.com/emacsmirror/multi-eshell"
+        },
+        "version": "ac10d93d64e6ea9706ae4396df186faeecaaea12"
+    }
+}

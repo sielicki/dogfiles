@@ -1,0 +1,7 @@
+[multi-eshell]
+src.git = "https://github.com/emacsmirror/multi-eshell"
+fetch.git = "https://github.com/emacsmirror/multi-eshell"
+
+[beardbolt]
+src.git = "https://github.com/joaotavora/beardbolt.git"
+fetch.git = "https://github.com/joaotavora/beardbolt.git"
