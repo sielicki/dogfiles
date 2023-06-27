@@ -35,6 +35,7 @@
       pkgs.alacritty
       pkgs.direnv
       pkgs.xcbuild
+      pkgs.python3
 
       pkgs.raycast
       pkgs.discord
