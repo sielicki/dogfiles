@@ -550,32 +550,15 @@
 
 ;;Add extensions
 (use-package cape
-  ;; Bind dedicated completion commands
-  ;; Alternative prefix keys: C-c p, M-p, M-+, ...
-  ;; :bind (("C-c t p" . completion-at-point) ;; capf
-  ;;        ("C-c t t" . complete-tag)        ;; etags
-  ;;        ("C-c t d" . cape-dabbrev)        ;; or dabbrev-completion
-  ;;        ("C-c t h" . cape-history)
-  ;;        ("C-c t f" . cape-file)
-  ;;        ("C-c t k" . cape-keyword)
-  ;;        ("C-c t s" . cape-symbol)
-  ;;        ("C-c t a" . cape-abbrev)
-  ;;        ("C-c t l" . cape-line)
-  ;;        ("C-c t w" . cape-dict)
-  ;;        ("C-c t ^" . cape-tex)
-  ;;        ("C-c t &" . cape-sgml)
-  ;;        ("C-c t r" . cape-rfc1345))
   :config
-
   :init
-  ;;(add-to-list 'completion-at-point-functions #'cape-line)
-  (add-to-list 'completion-at-point-functions #'cape-dabbrev)
-  (add-to-list 'completion-at-point-functions #'cape-abbrev)
-  (add-to-list 'completion-at-point-functions #'cape-symbol)
-  (add-to-list 'completion-at-point-functions #'cape-history)
-  (add-to-list 'completion-at-point-functions #'cape-keyword)
-  (add-to-list 'completion-at-point-functions #'cape-file)
-  (add-to-list 'completion-at-point-functions #'cape-dict))
+  (add-to-list 'completion-at-point-functions (cape-super-capf #'cape-dabbrev
+							       #'cape-abbrev
+							       #'cape-symbol
+							       #'cape-history
+							       #'cape-keyword
+							       #'cape-file
+							       #'cape-dict)))
 
 (use-package magit
   :custom
