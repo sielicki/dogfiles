@@ -41,12 +41,12 @@
       pkgs.discord
       pkgs.spotify
 
-      inputs.cells.emacs.packages.emacs
+      inputs.cells.emacs.packages.my-emacs
     ];
 
     services.emacs = {
       enable = true;
-      package = inputs.cells.emacs.packages.emacs;
+      package = inputs.cells.emacs.packages.my-emacs;
     };
 
     services.nix-daemon.enable = true;

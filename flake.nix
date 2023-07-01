@@ -9,6 +9,7 @@
         darwinConfigurations
         homeConfigurations
         (functions "homeProfiles")
+        (functions "lib")
       ];
       flakeModules.hive = importApply ./hive-flake-module.nix {inherit (inputs) hive;};
     in {
@@ -55,12 +56,14 @@
             hiveBlockTypes
             ++ (with inputs.std.blockTypes; [
               (installables "packages" {ci.build = true;})
+              (functions "lib")
             ]);
           nixpkgsConfig = {allowUnfree = true;};
         };
         harvest = {
           packages = [
             ["emacs" "packages"]
+            ["lib"]
           ];
         };
       };
