@@ -710,11 +710,6 @@
 (use-package consult-flycheck
   :after (consult flycheck))
 
-;; (use-package eldoc-box
-;;   :diminish (eldoc-box-hover-at-point-mode eldoc-box-hover-mode)
-;;   :hook
-;;   ((eldoc-mode) . eldoc-box-hover-at-point-mode))
-
 (use-package vterm
   :config (use-package multi-vterm))
 
