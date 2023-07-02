@@ -33,7 +33,7 @@
               shfmt.enable = true;
               shellcheck.enable = true;
               alejandra.enable = true;
-              deadnix.enable = true;
+              deadnix.enable = false;
               deadnix.excludes = ["cells/emacs/packages/epkgs/_sources/generated.nix"];
               nil.enable = true;
               black.enable = true;
