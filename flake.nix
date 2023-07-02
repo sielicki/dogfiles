@@ -71,19 +71,24 @@
       flake = {default = flakeModules.hive;};
     });
 
+  inputs.flake-utils.url = "github:numtide/flake-utils";
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-23.05";
 
     nix-index-database.url = "github:Mic92/nix-index-database";
-    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
+    nix-index-database.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
     nvfetcher.url = "github:berberman/nvfetcher";
     nvfetcher.inputs.nixpkgs.follows = "nixpkgs";
+    nvfetcher.inputs.flake-utils.follows = "flake-utils";
 
     emacs-overlay.url = "github:nix-community/emacs-overlay";
-    emacs-overlay.inputs.nixpkgs.follows = "nixpkgs";
+    emacs-overlay.inputs.nixpkgs.follows = "nixpkgs-unstable";
+    emacs-overlay.inputs.nixpkgs-stable.follows = "nixpkgs-stable";
+    emacs-overlay.inputs.flake-utils.follows = "flake-utils";
   };
 
   inputs = {
@@ -91,18 +96,27 @@
     flake-parts.inputs.nixpkgs-lib.follows = "nixpkgs";
 
     haumea.url = "github:nix-community/haumea";
+    haumea.inputs.nixpkgs.follows = "nixpkgs";
 
     treefmt-nix.url = "github:numtide/treefmt-nix";
     treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
+    pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
+    pre-commit-hooks.inputs.nixpkgs.follows = "nixpkgs";
+    pre-commit-hooks.inputs.nixpkgs-stable.follows = "nixpkgs-stable";
+    pre-commit-hooks.inputs.flake-utils.follows = "flake-utils";
+
     devenv.url = "github:cachix/devenv";
+    devenv.inputs.pre-commit-hooks.follows = "pre-commit-hooks";
     devenv.inputs.nixpkgs.follows = "nixpkgs";
     std.url = "github:divnix/std";
     std.inputs.nixpkgs.follows = "nixpkgs";
 
     colmena.url = "github:zhaofengli/colmena";
+    colmena.inputs.flake-utils.follows = "flake-utils";
     hive.url = "github:divnix/hive";
     hive.inputs.nixpkgs.follows = "nixpkgs";
     hive.inputs.colmena.follows = "colmena";
+    hive.inputs.disko.follows = "disko";
 
     home.url = "github:nix-community/home-manager";
     home.inputs.nixpkgs.follows = "nixpkgs";
@@ -114,6 +128,7 @@
     disko.inputs.nixpkgs.follows = "nixpkgs";
     nix2container.url = "github:nlewo/nix2container";
     nix2container.inputs.nixpkgs.follows = "nixpkgs";
+    nix2container.inputs.flake-utils.follows = "flake-utils";
     mk-shell-bin.url = "github:rrbutani/nix-mk-shell-bin";
   };
 
