@@ -587,10 +587,6 @@
   :config
   (setq-default goggles-pulse t))
 
-(use-package beacon
-  :config
-  (beacon-mode 1))
-
 (use-package consult
   ;; Replace bindings. Lazily loaded due by `use-package'.
   :bind (;; C-c bindings in `mode-specific-map'
