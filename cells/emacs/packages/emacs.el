@@ -669,6 +669,8 @@
   (setq xref-show-xrefs-function #'consult-xref
         xref-show-definitions-function #'consult-xref)
 
+  (setq xref-prompt-for-identifier nil)
+
   ;; Configure other variables and modes in the :config section,
   ;; after lazily loading the package.
   :config
@@ -799,6 +801,8 @@
    citre-project-root-function (apply-partially #'consult--default-project-function nil)
    citre-default-create-tags-file-location 'project-cache
    citre-use-project-root-when-creating-tags t
+   ;; default ctags args passes --objdir which fails if it doesn't exist, this is simpler.
+   citre-gtags-args '("--compact")
    citre-auto-enable-citre-mode-modes '(prog-mode)))
 
 ;; Local Variables:
