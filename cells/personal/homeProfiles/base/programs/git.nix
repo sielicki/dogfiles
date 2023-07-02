@@ -10,8 +10,9 @@
       git-review
       git-lfs
       git-filter-repo
+      git-subrepo
       git-autofixup
-      mr
+      lazygit
     ];
   };
 
